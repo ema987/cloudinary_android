@@ -60,7 +60,9 @@ public class WorkManagerStrategy implements BackgroundRequestStrategy {
         @NonNull
         @Override
         public Worker.Result doWork() {
-            UploadStatus result = MediaManager.get().processRequest(this.getApplicationContext(), new WorkManagerRequestParams(getInputData()));
+            WorkManagerRequestParams params = new WorkManagerRequestParams(getInputData());
+            params.putInt(DefaultRequestProcessor.ERROR_COUNT_PARAM, getRunAttemptCount());
+            UploadStatus result = MediaManager.get().processRequest(this.getApplicationContext(), params);
             return adapt(result);
         }
     }
