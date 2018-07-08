@@ -40,6 +40,9 @@ android {
 dependencies {
     api "com.cloudinary:cloudinary-core:${cloudinaryLibsVersion}"
 
+    def work_version = "1.0.0-alpha04"
+    implementation "android.arch.work:work-runtime:$work_version"
+
     implementation "com.android.support:support-compat:${androidSupportVersion}"
     implementation ('com.evernote:android-job:1.2.6', {
         exclude group: 'com.android.support', module: 'support-compat'
