@@ -295,9 +295,8 @@ public class MainActivity extends AppCompatActivity implements ResourcesAdapter.
 
     @Override
     public void onCancelClicked(Resource resource) {
-        MediaManager.get().cancelRequest(resource.getRequestId());
-        showSnackBar(getString(R.string.request_cancelled));
         deleteResource(resource, false, false);
+        showSnackBar(getString(R.string.request_cancelled));
     }
 
     private void showSnackBar(String message) {

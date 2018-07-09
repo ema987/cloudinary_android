@@ -5,6 +5,7 @@ import android.content.Context;
 import com.cloudinary.android.callback.ErrorInfo;
 
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
 
@@ -76,16 +77,25 @@ class DefaultRequestDispatcher implements RequestDispatcher {
      * {@inheritDoc}
      */
     @Override
-    public boolean cancelRequest(String requestId) {
-        synchronized (cancellationLock) {
-            boolean cancelled = strategy.cancelRequest(requestId);
-            if (!cancelled) {
-                // request not dispatched yet (still preprocessing/preparing)
-                abortedRequestIds.add(requestId);
-            }
+    public boolean cancelRequest(final String requestId) {
+        MediaManager.get().execute(new Runnable() {
+            @Override
+            public void run() {
 
-            return cancelled;
-        }
+                synchronized (cancellationLock) {
+                    boolean cancelled = strategy.cancelRequest(requestId);
+                    if (!cancelled) {
+                        // request not dispatched yet (still preprocessing/preparing)
+                        abortedRequestIds.add(requestId);
+                    }
+
+
+                }
+            }
+        });
+
+        // TODO we can't report correctly
+        return true;
     }
 
     /**
@@ -93,11 +103,16 @@ class DefaultRequestDispatcher implements RequestDispatcher {
      */
     @Override
     public void queueRoomFreed() {
-        int room = MediaManager.get().getGlobalUploadPolicy().getMaxConcurrentRequests() - strategy.getPendingImmediateJobsCount() - strategy.getRunningJobsCount();
-        Logger.d(TAG, String.format("queueRoomFreed called, there's room for %d requests.", room));
-        if (room > 0) {
-            strategy.executeRequestsNow(room);
-        }
+        MediaManager.get().execute(new Runnable() {
+            @Override
+            public void run() {
+                int room = MediaManager.get().getGlobalUploadPolicy().getMaxConcurrentRequests() - strategy.getPendingImmediateJobsCount() - strategy.getRunningJobsCount();
+                Logger.d(TAG, String.format(Locale.US, "queueRoomFreed called, there's room for %d requests.", room));
+                if (room > 0) {
+                    strategy.executeRequestsNow(room);
+                }
+            }
+        });
     }
 
     /**

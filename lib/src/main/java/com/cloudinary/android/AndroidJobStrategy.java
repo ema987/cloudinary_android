@@ -12,6 +12,7 @@ import com.evernote.android.job.JobRequest;
 import com.evernote.android.job.util.support.PersistableBundleCompat;
 
 import java.lang.ref.WeakReference;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -118,7 +119,7 @@ class AndroidJobStrategy implements BackgroundRequestStrategy {
             }
         }
 
-        Logger.d(TAG, String.format("Job scheduled started %d requests.", started));
+        Logger.d(TAG, String.format(Locale.US, "Job scheduled started %d requests.", started));
     }
 
     private boolean isSoonButNotImmediate(JobRequest jobRequest) {
