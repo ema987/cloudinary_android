@@ -1,6 +1,5 @@
 package com.cloudinary.android;
 
-import android.support.test.runner.AndroidJUnit4;
 
 import com.cloudinary.Transformation;
 import com.cloudinary.utils.ObjectUtils;
@@ -12,6 +11,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.test.runner.AndroidJUnit4;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;

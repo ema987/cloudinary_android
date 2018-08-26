@@ -3,8 +3,6 @@ package com.cloudinary.android;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
-import android.support.test.InstrumentationRegistry;
 
 import com.cloudinary.android.payload.FilePayload;
 import com.cloudinary.android.payload.PayloadNotFoundException;
@@ -25,6 +23,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.Callable;
+
+import androidx.annotation.NonNull;
+import androidx.test.InstrumentationRegistry;
 
 
 public class PreprocessTest extends AbstractTest {

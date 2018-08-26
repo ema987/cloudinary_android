@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v4.util.Pools;
 
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.callback.ListenerService;
@@ -21,6 +20,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import androidx.core.util.Pools;
 
 /**
  * {@inheritDoc}

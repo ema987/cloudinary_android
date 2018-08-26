@@ -1,7 +1,6 @@
 package com.cloudinary.android.sample.app;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.cloudinary.android.sample.model.Resource;
 import com.cloudinary.android.sample.persist.ResourceRepo;
 
 import java.util.List;
+
+import androidx.fragment.app.Fragment;
 
 public class RecentPagerFragment extends UploadedPageFragment {
 

@@ -3,8 +3,6 @@ package com.cloudinary.android;
 import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.cloudinary.Cloudinary;
@@ -29,6 +27,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import static com.cloudinary.android.ResponsiveUrl.Preset;
 

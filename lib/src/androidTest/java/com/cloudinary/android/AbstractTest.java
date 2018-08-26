@@ -3,8 +3,6 @@ package com.cloudinary.android;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.test.InstrumentationRegistry;
 
 import com.cloudinary.android.payload.FilePayload;
 import com.cloudinary.android.policy.TimeWindow;
@@ -20,6 +18,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.UUID;
+
+import androidx.annotation.NonNull;
+import androidx.test.InstrumentationRegistry;
 
 public class AbstractTest {
     public static final String TEST_IMAGE = "images/old_logo.png";

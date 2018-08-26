@@ -1,8 +1,6 @@
 package com.cloudinary.android;
 
 import android.net.Uri;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.payload.ByteArrayPayload;
@@ -20,6 +18,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
 import java.util.concurrent.Callable;
+
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

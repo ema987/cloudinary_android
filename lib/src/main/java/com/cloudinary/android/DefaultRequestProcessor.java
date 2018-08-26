@@ -1,7 +1,6 @@
 package com.cloudinary.android;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.ProgressCallback;
@@ -25,6 +24,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import androidx.annotation.NonNull;
 
 import static com.cloudinary.Uploader.BUFFER_SIZE;
 import static com.cloudinary.android.callback.UploadStatus.FAILURE;

@@ -1,13 +1,14 @@
 package com.cloudinary.android.payload;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Base64;
 
 import com.cloudinary.android.Logger;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+
+import androidx.annotation.NonNull;
 
 /**
  * This class is used to handle uploading of images/videos as byte arrays

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
 
 import com.cloudinary.android.Logger;
 import com.cloudinary.android.sample.model.Resource;
@@ -13,6 +12,8 @@ import com.cloudinary.android.sample.model.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 public class CloudinarySqliteHelper extends SQLiteOpenHelper {
     public static final String ID_COL = "ID";

@@ -3,10 +3,11 @@ package com.cloudinary.android.sample.app;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatDialogFragment;
 
 import com.cloudinary.android.sample.R;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class ClearMediaFromDeviceDialogFragment extends AppCompatDialogFragment {
     @Override

@@ -1,8 +1,6 @@
 package com.cloudinary.android;
 
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -10,6 +8,9 @@ import android.widget.ImageView;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.Url;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * This class is used to generate view-size aware cloudinary Urls. It takes any {@link View} and

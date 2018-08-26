@@ -1,7 +1,6 @@
 package com.cloudinary.android.sample.app;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
@@ -20,6 +19,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 class ResourcesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_REGULAR = 0;

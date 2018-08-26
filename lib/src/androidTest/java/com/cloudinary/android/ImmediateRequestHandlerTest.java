@@ -1,8 +1,6 @@
 package com.cloudinary.android;
 
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 
 import com.cloudinary.android.payload.FilePayload;
 import com.cloudinary.android.preprocess.ImagePreprocessChain;
@@ -14,6 +12,9 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 import java.util.concurrent.Callable;
+
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

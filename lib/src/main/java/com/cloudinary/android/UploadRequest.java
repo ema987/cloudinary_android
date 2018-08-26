@@ -1,8 +1,6 @@
 package com.cloudinary.android;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.callback.UploadCallback;
@@ -21,6 +19,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * A request to upload a single {@link Payload} to Cloudinary. Note: Once calling {@link #dispatch()} the request is sealed and any

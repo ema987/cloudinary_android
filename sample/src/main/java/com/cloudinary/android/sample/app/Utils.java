@@ -16,13 +16,14 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.provider.DocumentsContract;
-import android.support.v4.util.Pair;
 import android.view.WindowManager;
 
 import com.cloudinary.utils.StringUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+
+import androidx.core.util.Pair;
 
 public class Utils {
     public static Bitmap decodeBitmapStream(Context context, Uri uri, int reqWidth, int reqHeight) throws IOException {

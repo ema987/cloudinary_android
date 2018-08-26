@@ -1,8 +1,6 @@
 package com.cloudinary.android;
 
 import android.net.Uri;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 
 import com.cloudinary.android.payload.ByteArrayPayload;
 import com.cloudinary.android.payload.FilePayload;
@@ -19,6 +17,9 @@ import org.junit.runner.RunWith;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import static junit.framework.Assert.assertEquals;
 

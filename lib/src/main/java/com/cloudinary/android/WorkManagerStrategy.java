@@ -2,7 +2,6 @@ package com.cloudinary.android;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
 
 import com.cloudinary.android.callback.UploadStatus;
 import com.cloudinary.android.policy.UploadPolicy;
@@ -13,6 +12,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.NonNull;
 import androidx.work.BackoffPolicy;
 import androidx.work.Constraints;
 import androidx.work.Data;
@@ -237,7 +237,7 @@ public class WorkManagerStrategy implements BackgroundRequestStrategy {
         @NonNull
         @Override
         public Worker.Result doWork() {
-            String requestId = getInputData().getString("requestId", null);
+            String requestId = getInputData().getString("requestId");
             registerThread(requestId);
             try {
                 WorkManagerRequestParams params = new WorkManagerRequestParams(getInputData());
@@ -290,8 +290,14 @@ public class WorkManagerStrategy implements BackgroundRequestStrategy {
         }
 
         @Override
+        public void putBoolean(String key, boolean value) {
+
+        }
+
+        @Override
         public String getString(String key, String defaultValue) {
-            return data.getString(key, defaultValue);
+            String string = data.getString(key);
+            return string != null ? string : defaultValue;
         }
 
         @Override
@@ -302,6 +308,11 @@ public class WorkManagerStrategy implements BackgroundRequestStrategy {
         @Override
         public long getLong(String key, long defaultValue) {
             return data.getLong(key, defaultValue);
+        }
+
+        @Override
+        public boolean getBoolean(String key, boolean defaultValue) {
+            return false;
         }
 
         public Data getData() {

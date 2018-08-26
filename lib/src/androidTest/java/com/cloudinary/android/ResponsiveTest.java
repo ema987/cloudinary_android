@@ -1,6 +1,5 @@
 package com.cloudinary.android;
 
-import android.support.test.InstrumentationRegistry;
 import android.widget.ImageView;
 
 import com.cloudinary.Cloudinary;
@@ -12,6 +11,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.concurrent.Callable;
+
+import androidx.test.InstrumentationRegistry;
 
 
 public class ResponsiveTest extends AbstractTest {
