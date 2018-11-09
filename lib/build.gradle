@@ -41,7 +41,7 @@ dependencies {
     api "com.cloudinary:cloudinary-core:${cloudinaryLibsVersion}"
 
     implementation "com.android.support:support-compat:${androidSupportVersion}"
-    implementation ('com.evernote:android-job:1.2.6', {
+    implementation ('com.github.ema987:android-job:ecc9eec1c6', {
         exclude group: 'com.android.support', module: 'support-compat'
     })
 
